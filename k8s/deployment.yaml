@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: entro-deployment
+  labels:
+    app: entro
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: entro
+  template:
+    metadata:
+      labels:
+        app: entro
+    spec:
+      containers:
+        - name: entro
+          image: gregorym/entro
+          ports:
+            - containerPort: 3333
