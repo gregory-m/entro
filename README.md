@@ -35,3 +35,8 @@ $ kubectl apply -f k8s/deployment.yaml
 $ kubectl describe svc entro-service
 ```
 
+### Create k8s secret
+```
+  kubectl create secret generic aws --from-literal=key-id=key-id --from-literal=key=topsecret
+
+```
